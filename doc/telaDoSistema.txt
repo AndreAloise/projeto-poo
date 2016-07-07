@@ -1,0 +1,59 @@
+Bem vindo ao sistema mercadex!                             
+
+Qual seu cargo?
+1 - Gerente
+2 - funcionário
+
+GERENTE:                                       	
+						
+Entre com seu id...			       	
+----------------			       	
+Entre com seu nome...                          	
+----------------			       		
+
+Bem vindo Fulano! 			       	
+
+OPÇÕES:						
+1 - inserir um novo produto			
+2 - reabastecer estoque				
+3 - emitir relatório de venda
+4 - emitir relatório de estoque
+5 - sair
+
+FUNCIONÁRIO:
+						
+Entre com seu id...			       	
+----------------			       	
+Entre com seu nome...                          	
+----------------			       		
+
+Bem vindo Fulano! 			       	
+
+OPÇÕES:						
+1 - realizar venda
+
+se 1:
+
+-------digite x para sair---------
+
+informe o cod do produto:               
+------------------------
+informe a quantidade ou peso:
+------------------------	
+
+se sair:
+
+O Total da compra é X
+
+Entre com o método de pagamento:
+1 - dinheiro
+2 - cartão
+
+se 1: 
+Venda finalizada, o troco é X
+
+se 2: 
+Venda finalizada, aguarde a impressão da nota fiscal.
+
+
+		
