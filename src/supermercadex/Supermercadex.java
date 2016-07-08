@@ -5,30 +5,35 @@
  */
 package supermercadex;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Filipe Lima
  */
-public class Supermercadex {
+class Supermercadex {
 
+    public static Mercado mercado;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Estoque mercadex = new Estoque();
-        Produto p1 = new Produto(1, 2.50, "Trakinas");
-        Item i1 = new Item(p1, 20);
-        Produto p2 = new Produto(2, 14.20, "Feijão");
-        Item i2 = new Item(p2, 10);
+        //ler arquivo mercado.txt e gerar o mercado
+        String n = "Mercadex";
+        int g = 1, f = 5, c = 3;
+        mercado = new Mercado(n, g, f, c);
+        Produto p1 = new Produto(1, 2.50, "Biscoito");
+        Produto p2 = new Produto(2, 12.50, "Feijão");
         
-        mercadex.insereProduto(i1);
-        mercadex.insereProduto(i2);
-        mercadex.insereProduto(i1);
-        mercadex.imprimeEstoque();
-        mercadex.insereProduto(i1);
-        mercadex.imprimeEstoque();
+        //inicia o sistema
+        Sistema.iniciaSistema(mercado);
+        
         
         
     }
+
+    
+
+   
     
 }
