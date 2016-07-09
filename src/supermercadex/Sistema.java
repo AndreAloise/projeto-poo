@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Lipejota
  */
-public class Sistema {
+class Sistema {
 
     public Sistema() {
     }
@@ -207,7 +207,16 @@ public class Sistema {
     }
 
     public void verListaDeProdutos(Mercado m) {
+        Scanner in = new Scanner(System.in);
         m.getEstoque().imprimeEstoque();
+        boolean sair = false;
+        while(!sair){
+            System.out.println("Digite sair para sair.");
+            String n = in.next();
+            if(n!=null){
+                sair = true;
+            }
+        }
     }
 
     public void relatorioVendas() {
