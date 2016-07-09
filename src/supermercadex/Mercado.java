@@ -18,14 +18,16 @@ import java.util.List;
     
     private String nome;
     private Estoque estoque;
+    private ArrayList<Produto> produtos;
     private Gerente[] gerentes;
     private Funcionario[] funcionarios;
     private Caixa[] caixas;
-    private List<Cliente> clientes;
+    private ArrayList<Cliente> clientes;
 
     public Mercado(String nome, int g, int f, int c) {
         this.nome = nome;
         estoque = new Estoque();
+        produtos = new ArrayList();
         gerentes = new Gerente[g];
         funcionarios = new Funcionario[f];
         caixas = new Caixa[c];
@@ -76,9 +78,16 @@ import java.util.List;
         return clientes;
     }
 
-    public void setClientes(List<Cliente> clientes) {
+    public void setClientes(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
     }
-    
+     public ArrayList<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(ArrayList<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
     
 }

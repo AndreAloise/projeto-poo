@@ -5,7 +5,6 @@
  */
 package supermercadex;
 
-import java.util.Scanner;
 
 /**
  *
@@ -14,6 +13,7 @@ import java.util.Scanner;
 class Supermercadex {
 
     public static Mercado mercado;
+    public static Sistema sistema;
     /**
      * @param args the command line arguments
      */
@@ -22,11 +22,13 @@ class Supermercadex {
         String n = "Mercadex";
         int g = 1, f = 5, c = 3;
         mercado = new Mercado(n, g, f, c);
+        sistema = new Sistema();
+        
         Produto p1 = new Produto(1, 2.50, "Biscoito");
         Produto p2 = new Produto(2, 12.50, "Feijão");
         
         //inicia o sistema
-        Sistema.iniciaSistema(mercado);
+        sistema.iniciaSistema(mercado);
         
         
         

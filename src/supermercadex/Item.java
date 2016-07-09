@@ -10,6 +10,7 @@ package supermercadex;
  * @author Lipe
  */
 public class Item {
+    
     private Produto item;
     private int quantidade;
 

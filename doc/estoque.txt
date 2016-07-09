@@ -1,0 +1,5 @@
+001 Macarrão 100 uni
+002 Arroz 50 uni
+003 Carne 30 kg
+004 Feijão 40 uni
+005 Alface 10 kg

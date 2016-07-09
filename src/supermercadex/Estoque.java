@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Estoque {
     
-    private List <Item> estoque;
+    private ArrayList <Item> estoque;
 
     public Estoque() {
         this.estoque = new ArrayList();
@@ -24,22 +24,31 @@ public class Estoque {
         return estoque;
     }
     
-    public void insereProduto(Item novo){
-        boolean temItem = false;
+    public int insereProduto(int cod, int qtd){
+        int temItem = 0;
         for (int i = 0; i < estoque.size(); i++) {
-            if(estoque.get(i).getItem().getCod() == novo.getItem().getCod()){
-                estoque.get(i).setQuantidade(estoque.get(i).getQuantidade()+novo.getQuantidade());
-                temItem = true;
+            if(estoque.get(i).getItem().getCod() == cod){
+                estoque.get(i).setQuantidade(qtd);
+                temItem = 1;
+                return temItem;
             }
         }
-        if(temItem==false){
-            estoque.add(novo);
-        }
+        return temItem;
+    }
+    public void insereNovoProduto(Mercado m, int cod, double p, String n, int qtd){
+        Produto p1 = new Produto(cod, p, n);
+        Item novo = new Item(p1, qtd);
+        m.getProdutos().add(p1);
+        m.getEstoque().getEstoque().add(novo);
+        
     }
     
     public void imprimeEstoque(){
         for (int i = 0; i < estoque.size(); i++) {
-            System.out.println(estoque.get(i).toString());
+            System.out.println("--------------------------------");
+            System.out.println("Itens de estoque: " + estoque.get(i).toString());
+            System.out.println("--------------------------------");
+            
         }
     }
     

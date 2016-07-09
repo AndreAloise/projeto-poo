@@ -9,6 +9,11 @@ package supermercadex;
  *
  * @author Lipejota
  */
-class Funcionario {
+class Funcionario extends Pessoa{
+
+    public Funcionario(String n, int id) {
+        nome = n;
+        this.id = id;
+    }
     
 }
